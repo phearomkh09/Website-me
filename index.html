@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChanPhearom | Personal website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/phearom.png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo">Chan-Phearom</div>
+    <nav class="menu" id="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Hamburger (Mobile) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle">🌙</button>
+</header>
+
+<!-- Hero -->
+<section class="hero reveal reveal-scale" id="home">
+  <img src="images/phearom.png" alt="Phearom" class="hero-img">
+
+  <h1>Hello, I'm <span>Phearom</span></h1>
+  <p>Web Learner • Tech Lover</p>
+
+  <button class="glow-btn" onclick="goContact()">Contact Me</button>
+</section>
+
+<!-- About -->
+<section class="about reveal reveal-left" id="about">
+  <h2>About Me</h2>
+  <p>
+    សូមស្វាគមន៍មកកាន់គេហទំព័រយើងខ្ញុំ។
+    <p></p>
+    I enjoy learning new things and building clean, modern websites.
+  </p>
+</section>
+
+<!-- Contact -->
+<section class="contact reveal reveal-right" id="contact">
+  <h2>Contact info</h2>
+
+  <div class="contact-grid">
+  <a class="contact-btn" href="mailto:khkha8410@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+  <a class="contact-btn" href="https://t.me/Phearom7z" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+  <a class="contact-btn" href="https://youtube.com/@mrphearom18?si=uOSY_NMqhf_uuc9h" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+  <a class="contact-btn" href="https://www.tiktok.com/@chan.phearom2?_r=1&_t=ZS-92tirRlPQu7" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+  <a class="contact-btn" href="https://www.facebook.com/share/1AcPMZdaS7/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+  <a class="contact-btn" href="https://discord.gg/fDMa8SkdsD" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+  <a class="contact-btn center bot-btn" href="https://khiqbot.kesug.com/?i=1" target="_blank"><i class="fas fa-globe"></i> Website KHIQ-Bot</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2026 Chan.Phearom. All Rights Reserved.<br>
+  <a href="#">Privacy Policy</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
