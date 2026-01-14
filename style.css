@@ -256,7 +256,6 @@ section {
   width: 100%;
   max-width: 1200px;
   margin: 20px auto;
-  margin-top: 20px;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -264,9 +263,7 @@ section {
 
 .slides {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
+  height: 220px;
 }
 
 .slide {
@@ -276,6 +273,7 @@ section {
   opacity: 0;
   transition: opacity 1s ease;
   box-shadow:0 0 15px var(--primary),0 0 30px rgba(56,189,248,0.6);
+  animation: float 6s ease-in-out infinite;
 }
 
 .slide.active {
