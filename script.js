@@ -66,4 +66,4 @@ function createSnow(){
 
 /* MORE SNOW */
 
-setInterval(createSnow,50);
+setInterval(createSnow,200);
