@@ -485,35 +485,17 @@ footer{
   0%{
     transform:
     translateY(-10px)
-    translateX(0px);
+    rotate(0deg);
 
     opacity:0;
-  }
-
-  25%{
-    transform:
-    translateY(25vh)
-    translateX(15px);
-  }
-
-  50%{
-    transform:
-    translateY(50vh)
-    translateX(-15px);
-  }
-
-  75%{
-    transform:
-    translateY(75vh)
-    translateX(15px);
   }
 
   100%{
     transform:
     translateY(100vh)
-    translateX(-15px);
+    rotate(360deg);
 
     opacity:1;
   }
 
-       }
+    }
