@@ -1,4 +1,6 @@
-/* CONTACT BUTTON */
+/* =========================
+   CONTACT BUTTON
+========================= */
 
 function goContact(){
 
@@ -10,7 +12,9 @@ function goContact(){
 
 }
 
-/* IMAGE SLIDER */
+/* =========================
+   IMAGE SLIDER
+========================= */
 
 const slides =
 document.querySelectorAll(".slide");
@@ -33,7 +37,9 @@ setInterval(() => {
 
 },3000);
 
-/* SNOW EFFECT */
+/* =========================
+   SNOW EFFECT
+========================= */
 
 const snowContainer =
 document.querySelector(".snow-container");
@@ -47,23 +53,26 @@ function createSnow(){
 
   snow.innerHTML = "❄";
 
+  /* RANDOM POSITION */
   snow.style.left =
   Math.random() * window.innerWidth + "px";
 
+  /* RANDOM SIZE */
   snow.style.fontSize =
-  Math.random() * 25 + 10 + "px";
+  Math.random() * 15 + 15 + "px";
 
+  /* RANDOM SPEED */
   snow.style.animationDuration =
   Math.random() * 5 + 8 + "s";
 
   snowContainer.appendChild(snow);
 
+  /* REMOVE AFTER FALL */
   setTimeout(() => {
     snow.remove();
-  },5000);
+  },13000);
 
 }
 
-/* MORE SNOW */
-
-setInterval(createSnow,150);
+/* CREATE LOTS OF SNOW */
+setInterval(createSnow,30);
