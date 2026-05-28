@@ -63,13 +63,13 @@ function createSnow(){
 
   /* RANDOM SPEED */
   snow.style.animationDuration =
-  Math.random() * 5 + 5 + "s";
+  Math.random() * 8 + 12 + "s";
 
   snowContainer.appendChild(snow);
 
   setTimeout(() => {
     snow.remove();
-  },10000);
+  },15000);
 
 }
 
