@@ -261,12 +261,8 @@ body{
 /* SLIDER */
 
 .hero-slider{
-  position:relative;
   width:100%;
-  max-width:100%;
   margin:auto;
-
-  overflow:hidden;
 }
 
 .slide{
@@ -279,11 +275,11 @@ body{
 
 .slide img{
   width:100%;
+  max-width:100%;
+
   height:auto;
 
   display:block;
-
-  object-fit:contain;
 
   border-radius:20px;
 }
