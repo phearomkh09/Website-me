@@ -10,23 +10,27 @@ function goContact(){
 
 /* SLIDER */
 
-const slides =
-document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".slide");
 
-let index = 0;
+let current = 0;
 
-setInterval(() => {
+function showSlide(index){
 
-  slides[index]
-  .classList.remove("active");
+  slides.forEach(slide =>{
+    slide.classList.remove("active");
+  });
 
-  index++;
+  slides[index].classList.add("active");
+}
 
-  if(index >= slides.length){
-    index = 0;
+setInterval(()=>{
+
+  current++;
+
+  if(current >= slides.length){
+    current = 0;
   }
 
-  slides[index]
-  .classList.add("active");
+  showSlide(current);
 
 },3000);
