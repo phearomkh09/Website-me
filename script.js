@@ -49,13 +49,13 @@ function createSnow(){
   const snow =
   document.createElement("div");
 
-  snow.classList.add("snowflake");
+  snow.className = "snowflake";
 
   snow.innerHTML = "❄";
 
   /* RANDOM POSITION */
   snow.style.left =
-  Math.random() * window.innerWidth + "px";
+  Math.random() * 100 + "vw";
 
   /* RANDOM SIZE */
   snow.style.fontSize =
@@ -63,16 +63,15 @@ function createSnow(){
 
   /* RANDOM SPEED */
   snow.style.animationDuration =
-  Math.random() * 5 + 8 + "s";
+  Math.random() * 5 + 5 + "s";
 
   snowContainer.appendChild(snow);
 
-  /* REMOVE AFTER FALL */
   setTimeout(() => {
     snow.remove();
-  },13000);
+  },10000);
 
 }
 
-/* CREATE LOTS OF SNOW */
-setInterval(createSnow,30);
+/* LOTS OF SNOW */
+setInterval(createSnow,40);
