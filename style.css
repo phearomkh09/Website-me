@@ -476,6 +476,8 @@ footer{
   user-select:none;
 
   animation:snow linear infinite;
+
+  display:inline-block;
 }
 
 @keyframes snow{
