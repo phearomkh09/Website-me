@@ -453,43 +453,52 @@ footer{
 
 .snow{
   position:fixed;
-  top:0;
+  top:-100%;
   left:0;
 
   width:100%;
-  height:100%;
+  height:300%;
 
   pointer-events:none;
 
   z-index:9999;
 
   background-image:
-  radial-gradient(8px 8px at 100px 50px,#fff,transparent),
-  radial-gradient(6px 6px at 200px 150px,#fff,transparent),
-  radial-gradient(7px 7px at 300px 250px,#fff,transparent),
-  radial-gradient(5px 5px at 400px 350px,#fff,transparent),
-  radial-gradient(8px 8px at 500px 100px,#fff,transparent),
-  radial-gradient(6px 6px at 600px 200px,#fff,transparent),
-  radial-gradient(7px 7px at 700px 300px,#fff,transparent),
-  radial-gradient(5px 5px at 800px 400px,#fff,transparent),
-  radial-gradient(8px 8px at 900px 500px,#fff,transparent),
-  radial-gradient(6px 6px at 1000px 600px,#fff,transparent),
-  radial-gradient(7px 7px at 1100px 200px,#fff,transparent),
-  radial-gradient(5px 5px at 1200px 300px,#fff,transparent);
 
-  background-size:1200px 1200px;
+  radial-gradient(10px 10px at 5% 5%,white,transparent),
+  radial-gradient(8px 8px at 15% 15%,white,transparent),
+  radial-gradient(7px 7px at 25% 25%,white,transparent),
+  radial-gradient(9px 9px at 35% 35%,white,transparent),
+  radial-gradient(6px 6px at 45% 45%,white,transparent),
+  radial-gradient(10px 10px at 55% 55%,white,transparent),
+  radial-gradient(8px 8px at 65% 65%,white,transparent),
+  radial-gradient(7px 7px at 75% 75%,white,transparent),
+  radial-gradient(9px 9px at 85% 85%,white,transparent),
+  radial-gradient(6px 6px at 95% 95%,white,transparent),
 
-  animation:snowFall 8s linear infinite;
+  radial-gradient(10px 10px at 10% 40%,white,transparent),
+  radial-gradient(8px 8px at 20% 60%,white,transparent),
+  radial-gradient(7px 7px at 30% 80%,white,transparent),
+  radial-gradient(9px 9px at 40% 20%,white,transparent),
+  radial-gradient(6px 6px at 50% 70%,white,transparent),
+  radial-gradient(10px 10px at 60% 30%,white,transparent),
+  radial-gradient(8px 8px at 70% 90%,white,transparent),
+  radial-gradient(7px 7px at 80% 50%,white,transparent),
+  radial-gradient(9px 9px at 90% 10%,white,transparent);
+
+  background-size:100% 100%;
+
+  animation:snowFall 4s linear infinite;
 }
 
 @keyframes snowFall{
 
   0%{
-    transform:translateY(-100%);
+    transform:translateY(-50%);
   }
 
   100%{
-    transform:translateY(100%);
+    transform:translateY(0%);
   }
 
 }
