@@ -54,7 +54,7 @@ function createSnow(){
   Math.random() * 25 + 10 + "px";
 
   snow.style.animationDuration =
-  Math.random() * 3 + 2 + "s";
+  Math.random() * 5 + 5 + "s";
 
   snowContainer.appendChild(snow);
 
