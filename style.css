@@ -480,6 +480,8 @@ footer{
   display:inline-block;
 
   animation:snow linear infinite;
+  
+  will-change:transform;
 }
 
 /* SNOW ANIMATION */
@@ -488,7 +490,7 @@ footer{
 
   0%{
     transform:
-    translateY(-10px)
+    translateY(-10vh)
     rotate(0deg);
 
     opacity:0;
@@ -496,7 +498,7 @@ footer{
 
   100%{
     transform:
-    translateY(100vh)
+    translateY(120vh)
     rotate(360deg);
 
     opacity:1;
