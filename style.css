@@ -448,3 +448,44 @@ footer{
   }
 
 }
+
+/* SNOW EFFECT */
+
+.snow{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  pointer-events:none;
+
+  z-index:9999;
+
+  background-image:
+  radial-gradient(4px 4px at 100px 50px,#fff,transparent),
+  radial-gradient(3px 3px at 200px 150px,#fff,transparent),
+  radial-gradient(4px 4px at 300px 250px,#fff,transparent),
+  radial-gradient(3px 3px at 400px 350px,#fff,transparent),
+  radial-gradient(4px 4px at 500px 100px,#fff,transparent),
+  radial-gradient(3px 3px at 600px 200px,#fff,transparent),
+  radial-gradient(4px 4px at 700px 300px,#fff,transparent),
+  radial-gradient(3px 3px at 800px 400px,#fff,transparent);
+
+  background-size:800px 800px;
+
+  animation:snowFall 12s linear infinite;
+}
+
+@keyframes snowFall{
+
+  0%{
+    transform:translateY(-100%);
+  }
+
+  100%{
+    transform:translateY(100%);
+  }
+
+}
