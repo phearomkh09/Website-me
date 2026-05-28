@@ -74,4 +74,4 @@ function createSnow(){
 }
 
 /* LOTS OF SNOW */
-setInterval(createSnow,40);
+setInterval(createSnow,120);
