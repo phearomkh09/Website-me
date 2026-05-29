@@ -817,3 +817,72 @@ footer{
 }
 
 }
+
+/* VERIFIED */
+
+#musicArtist{
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:2px;
+
+  background:
+  linear-gradient(
+  90deg,
+  #38bdf8,
+  #8b5cf6
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  font-weight:600;
+
+  font-size:15px;
+}
+
+/* VERIFIED */
+
+#musicArtist::after{
+  content:"✓";
+
+  width:13px;
+  height:13px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#38bdf8;
+
+  color:white;
+
+  font-size:7px;
+
+  font-weight:bold;
+
+  -webkit-text-fill-color:white;
+
+  margin-left:2px;
+
+  box-shadow:
+  0 0 6px rgba(56,189,248,0.5);
+}
+#Favorite{
+  background:
+  linear-gradient(
+  90deg,
+  #8b5cf6,
+  #38bdf8
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+  }
