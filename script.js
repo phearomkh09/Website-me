@@ -69,7 +69,7 @@ function createSnow(){
 
   setTimeout(() => {
     snow.remove();
-  },7000);
+  },10000);
 
 }
 
