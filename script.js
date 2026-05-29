@@ -69,9 +69,9 @@ function createSnow(){
 
   setTimeout(() => {
     snow.remove();
-  },20000);
+  },35000);
 
 }
 
 /* LOTS OF SNOW */
-setInterval(createSnow,170);
+setInterval(createSnow,200);
