@@ -11,6 +11,8 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
+
+  max-width:100%;
 }
 
 html{
@@ -19,7 +21,11 @@ html{
 
 body{
   background:
-  radial-gradient(circle at top right,#1e1b4b,#050816 60%);
+  radial-gradient(
+  circle at top right,
+  #1e1b4b,
+  #050816 60%
+  );
 
   color:white;
 
@@ -38,9 +44,19 @@ body{
 
 ::-webkit-scrollbar-thumb{
   background:
-  linear-gradient(#8b5cf6,#38bdf8);
+  linear-gradient(
+  #8b5cf6,
+  #38bdf8
+  );
 
   border-radius:20px;
+}
+
+/* TEXT SELECT */
+
+::selection{
+  background:#8b5cf6;
+  color:white;
 }
 
 /* NAVBAR */
@@ -78,7 +94,11 @@ body{
   font-weight:700;
 
   background:
-  linear-gradient(90deg,#8b5cf6,#38bdf8);
+  linear-gradient(
+  90deg,
+  #8b5cf6,
+  #38bdf8
+  );
 
   -webkit-background-clip:text;
 
@@ -226,7 +246,11 @@ body{
 
 .primary-btn{
   background:
-  linear-gradient(90deg,#8b5cf6,#7c3aed);
+  linear-gradient(
+  90deg,
+  #8b5cf6,
+  #7c3aed
+  );
 
   color:white;
 
@@ -355,7 +379,7 @@ body{
 
 }
 
-/* ABOUT & CONTACT */
+/* ABOUT CONTACT */
 
 .about,
 .contact,
@@ -498,7 +522,7 @@ audio{
   border-radius:20px;
 }
 
-/* MUSIC BUTTONS */
+/* SONG BUTTONS */
 
 .music-buttons{
   display:grid;
@@ -506,34 +530,71 @@ audio{
   grid-template-columns:
   repeat(4,1fr);
 
-  gap:10px;
+  gap:12px;
 
   margin-top:20px;
 }
 
 .music-buttons button{
-  padding:10px;
+  padding:12px;
 
   border:none;
 
   border-radius:14px;
 
-  background:#8b5cf6;
-
   color:white;
+
+  font-size:14px;
+
+  font-weight:600;
 
   cursor:pointer;
 
   transition:.3s;
+}
 
-  box-shadow:
-  0 0 20px rgba(139,92,246,0.35);
+/* BUTTON COLORS */
+
+.music-buttons button:nth-child(1){
+  background:
+  linear-gradient(
+  135deg,
+  #8b5cf6,
+  #7c3aed
+  );
+}
+
+.music-buttons button:nth-child(2){
+  background:
+  linear-gradient(
+  135deg,
+  #06b6d4,
+  #0284c7
+  );
+}
+
+.music-buttons button:nth-child(3){
+  background:
+  linear-gradient(
+  135deg,
+  #f43f5e,
+  #e11d48
+  );
+}
+
+.music-buttons button:nth-child(4){
+  background:
+  linear-gradient(
+  135deg,
+  #22c55e,
+  #16a34a
+  );
 }
 
 .music-buttons button:hover{
-  transform:scale(1.05);
-
-  background:#7c3aed;
+  transform:
+  translateY(-4px)
+  scale(1.03);
 }
 
 /* FOOTER */
@@ -599,6 +660,10 @@ footer{
 
 @media(max-width:768px){
 
+body{
+  overflow-x:hidden;
+}
+
 .navbar{
   padding:18px 5%;
 }
@@ -611,14 +676,19 @@ footer{
   display:none;
 }
 
+/* HERO */
+
 .hero{
-  padding:120px 5% 40px;
+  padding:
+  110px 15px 40px;
 }
 
 .hero-content{
-  grid-template-columns:1fr;
+  display:flex;
 
-  gap:35px;
+  flex-direction:column;
+
+  gap:30px;
 }
 
 .hero-text{
@@ -626,29 +696,41 @@ footer{
 }
 
 .hero-text h1{
-  font-size:42px;
+  font-size:36px;
+
+  line-height:1.2;
 }
 
 .hero-text h3{
-  font-size:22px;
+  font-size:20px;
 }
 
 .hero-text p{
-  font-size:15px;
+  font-size:14px;
 
-  max-width:100%;
+  line-height:1.7;
 }
 
-.hero-buttons{
-  justify-content:center;
+/* BUTTONS */
 
-  flex-wrap:wrap;
+.hero-buttons{
+  width:100%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
 }
 
 .primary-btn,
 .secondary-btn{
   width:100%;
+
+  text-align:center;
 }
+
+/* SOCIAL */
 
 .socials{
   justify-content:center;
@@ -656,56 +738,56 @@ footer{
   flex-wrap:wrap;
 }
 
+/* SLIDER */
+
+.slide{
+  height:auto;
+}
+
 .slide img{
   height:220px;
+
+  border-radius:18px;
 }
+
+/* CARD */
 
 .about,
 .contact,
 .music-player{
-  width:92%;
+  width:95%;
 
-  padding:25px;
+  padding:18px;
 
-  border-radius:24px;
+  border-radius:20px;
 }
 
-.about h2,
-.contact h2,
-.music-player h2{
-  font-size:28px;
-}
-
-.contact-grid{
-  grid-template-columns:1fr;
-}
-
-/* MUSIC MOBILE */
+/* MUSIC */
 
 .music-card{
-  gap:15px;
+  gap:12px;
 }
 
 .music-card img{
-  width:95px;
-  height:95px;
+  width:80px;
+  height:80px;
 
-  border-radius:16px;
+  border-radius:14px;
 }
 
 .music-info h3{
-  font-size:18px;
+  font-size:16px;
 }
 
 .music-info p{
-  font-size:13px;
-
-  margin:5px 0 10px;
+  font-size:12px;
 }
 
 audio{
-  height:50px;
+  height:45px;
 }
+
+/* SONG BUTTONS */
 
 .music-buttons{
   grid-template-columns:
@@ -715,17 +797,23 @@ audio{
 }
 
 .music-buttons button{
-  width:100%;
-
-  font-size:12px;
+  font-size:11px;
 
   padding:9px;
 }
 
-footer{
-  padding:25px;
+/* CONTACT */
 
-  font-size:14px;
+.contact-grid{
+  grid-template-columns:1fr;
+}
+
+/* FOOTER */
+
+footer{
+  font-size:13px;
+
+  padding:20px;
 }
 
 }
