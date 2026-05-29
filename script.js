@@ -63,7 +63,7 @@ function createSnow(){
 
   /* RANDOM SPEED */
   snow.style.animationDuration =
-  Math.random() * 5 + 8 + "s";
+  Math.random() * 8 + 12 + "s";
 
   snowContainer.appendChild(snow);
 
@@ -74,4 +74,4 @@ function createSnow(){
 }
 
 /* LOTS OF SNOW */
-setInterval(createSnow,200);
+setInterval(createSnow,250);
