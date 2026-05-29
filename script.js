@@ -75,3 +75,59 @@ function createSnow(){
 
 /* LOTS OF SNOW */
 setInterval(createSnow,250);
+
+/* CHANGE SONG */
+
+function changeSong(
+song,
+title,
+artist,
+cover
+){
+
+  const player =
+  document.getElementById(
+  "musicPlayer"
+  );
+
+  const source =
+  document.getElementById(
+  "musicSource"
+  );
+
+  const musicTitle =
+  document.getElementById(
+  "musicTitle"
+  );
+
+  const musicArtist =
+  document.getElementById(
+  "musicArtist"
+  );
+
+  const musicCover =
+  document.getElementById(
+  "musicCover"
+  );
+
+  /* CHANGE SONG */
+  source.src = song;
+
+  /* CHANGE TITLE */
+  musicTitle.innerHTML =
+  title;
+
+  /* CHANGE ARTIST */
+  musicArtist.innerHTML =
+  artist;
+
+  /* CHANGE COVER */
+  musicCover.src = cover;
+
+  /* RELOAD */
+  player.load();
+
+  /* PLAY */
+  player.play();
+
+}
