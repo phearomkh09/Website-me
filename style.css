@@ -492,6 +492,11 @@ body{
 
   animation:
   float 4s ease-in-out infinite;
+  
+  box-shadow:
+  0 0 15px #8b5cf6,
+  0 0 30px #38bdf8,
+  0 0 50px rgba(56,189,248,0.4);
 }
 
 .music-info{
@@ -591,10 +596,45 @@ audio{
   );
 }
 
+.music-buttons button{
+  padding:12px 18px;
+
+  border:none;
+
+  border-radius:16px;
+
+  color:white;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  box-shadow:
+  0 0 10px rgba(139,92,246,0.5),
+  0 0 20px rgba(56,189,248,0.3);
+}
+
+.music-buttons button:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 0 15px #8b5cf6,
+  0 0 30px #38bdf8;
+}
+
 .music-buttons button:hover{
   transform:
   translateY(-4px)
   scale(1.03);
+}
+.music-player{
+  border:2px solid transparent;
+
+  background:
+  linear-gradient(#0b1020,#0b1020) padding-box,
+  linear-gradient(90deg,#8b5cf6,#38bdf8) border-box;
 }
 
 /* FOOTER */
