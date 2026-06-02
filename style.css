@@ -629,13 +629,6 @@ audio{
   translateY(-4px)
   scale(1.03);
 }
-.music-player{
-  border:2px solid transparent;
-
-  background:
-  linear-gradient(#0b1020,#0b1020) padding-box,
-  linear-gradient(90deg,#8b5cf6,#38bdf8) border-box;
-}
 
 /* FOOTER */
 
