@@ -921,21 +921,21 @@ footer{
   -webkit-text-fill-color:transparent;
   }
 
-.music-info .update-time{
-  display:block;
+.music-info p.update-time{
+  color:#8b5cf6 !important;
+
+  text-align:center !important;
 
   width:100%;
 
-  text-align:center;
+  display:block;
 
-  margin-top:22px;
+  margin-top:20px !important;
 
   padding-top:15px;
 
   border-top:
-  1px solid rgba(255,255,255,0.08);
-
-  color:#8b5cf6;
+  1px solid rgba(255,255,255,.08);
 
   font-size:14px;
 
