@@ -922,11 +922,18 @@ footer{
   }
 
 .update-time{
-  margin-top:25px;
+  width:100%;
+
+  display:block;
 
   text-align:center;
 
-  font-size:14px;
+  margin-top:22px;
+
+  padding-top:18px;
+
+  border-top:
+  1px solid rgba(255,255,255,0.08);
 
   background:
   linear-gradient(
@@ -939,8 +946,7 @@ footer{
 
   -webkit-text-fill-color:transparent;
 
-  padding-top:18px;
+  font-size:14px;
 
-  border-top:
-  1px solid rgba(255,255,255,0.08);
+  font-weight:600;
 }
