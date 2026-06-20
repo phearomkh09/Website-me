@@ -412,6 +412,25 @@ body{
   font-size:36px;
 
   margin-bottom:20px;
+  
+}
+.music-player p{
+  margin-top:25px;
+
+  text-align:center;
+
+  color:#94a3b8;
+
+  font-size:14px;
+
+  letter-spacing:1px;
+
+  opacity:.9;
+
+  padding-top:18px;
+
+  border-top:
+  1px solid rgba(255,255,255,0.08);
 }
 
 .about p{
