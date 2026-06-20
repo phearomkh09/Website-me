@@ -921,32 +921,26 @@ footer{
   -webkit-text-fill-color:transparent;
   }
 
-.update-time{
-  width:100%;
-
+.music-info .update-time{
   display:block;
+
+  width:100%;
 
   text-align:center;
 
   margin-top:22px;
 
-  padding-top:18px;
+  padding-top:15px;
 
   border-top:
   1px solid rgba(255,255,255,0.08);
 
-  background:
-  linear-gradient(
-  90deg,
-  #8b5cf6,
-  #38bdf8
-  );
-
-  -webkit-background-clip:text;
-
-  -webkit-text-fill-color:transparent;
+  color:#8b5cf6;
 
   font-size:14px;
 
   font-weight:600;
+
+  text-shadow:
+  0 0 10px rgba(139,92,246,.5);
 }
