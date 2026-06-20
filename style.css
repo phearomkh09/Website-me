@@ -924,26 +924,41 @@ footer{
 /* UPDATE TIME */
 
 .update-time{
-  width:100% !important;
+  margin-top:30px;
 
-  display:flex !important;
+  width:100%;
 
-  justify-content:center !important;
+  display:block;
 
-  align-items:center;
+  text-align:center;
 
-  margin-top:25px !important;
-
-  padding-top:18px;
-
-  color:#94a3b8 !important;
-
-  font-size:15px;
+  padding-top:20px;
 
   border-top:
   1px solid rgba(255,255,255,0.08);
 
-  text-align:center;
+  color:#94a3b8;
 
-  opacity:.9;
+  font-size:14px;
+
+  letter-spacing:1px;
+
+  opacity:.8;
+}
+
+/* LOGO COLOR */
+
+.update-time span{
+  background:
+  linear-gradient(
+  90deg,
+  #8b5cf6,
+  #38bdf8
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  font-weight:700;
 }
