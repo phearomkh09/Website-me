@@ -921,26 +921,19 @@ footer{
   -webkit-text-fill-color:transparent;
   }
 
-.music-info p.update-time{
-  color:#8b5cf6 !important;
-
-  text-align:center !important;
-
+.update-time{
   width:100%;
 
-  display:block;
-
-  margin-top:20px !important;
+  margin-top:20px;
 
   padding-top:15px;
 
-  border-top:
-  1px solid rgba(255,255,255,.08);
+  text-align:center;
+
+  color:#94a3b8;
 
   font-size:14px;
 
-  font-weight:600;
-
-  text-shadow:
-  0 0 10px rgba(139,92,246,.5);
+  border-top:
+  1px solid rgba(255,255,255,0.08);
 }
