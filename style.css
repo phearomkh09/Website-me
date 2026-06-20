@@ -415,30 +415,6 @@ body{
   
 }
 
-.music-player p{
-  margin-top:25px;
-
-  text-align:center;
-
-  font-size:14px;
-
-  background:
-  linear-gradient(
-  90deg,
-  #8b5cf6,
-  #38bdf8
-  );
-
-  -webkit-background-clip:text;
-
-  -webkit-text-fill-color:transparent;
-
-  border-top:
-  1px solid rgba(255,255,255,0.08);
-
-  padding-top:18px;
-}
-
 .about p{
   color:#cbd5e1;
 
