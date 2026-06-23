@@ -147,7 +147,7 @@ const songs=[
 [
 "music5.mp3",
 "Way You Are",
-"Artist: Jady | Jenna",
+"Artist: Jady | Jenna Norodom",
 "cover5.jpg"
 ],
 
