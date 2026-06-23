@@ -297,6 +297,17 @@ navigator
 ()=>player.pause()
 );
 
+/* DEFAULT INFO */
+
+title.innerText =
+"ជ្រើសរើសចម្រៀង 🎵";
+
+artist.innerText =
+"Artist: Unknown";
+
+cover.src =
+"Unknown.jpg";
+
 /* AUTO NEXT SONG */
 
 player.addEventListener(
@@ -310,6 +321,23 @@ current=
 changeSong(
 ...songs[current]
 );
+
+}
+);
+
+/* PAUSE WHEN LEAVE PAGE */
+
+document.addEventListener(
+"visibilitychange",
+()=>{
+
+if(
+document.hidden
+){
+
+player.pause();
+
+}
 
 }
 );
