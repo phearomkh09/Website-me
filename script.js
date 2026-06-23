@@ -308,6 +308,14 @@ artist.innerText =
 cover.src =
 "Unknown.jpg";
 
+/* DON'T PLAY */
+
+source.removeAttribute(
+"src"
+);
+
+player.load();
+
 /* AUTO NEXT SONG */
 
 player.addEventListener(
