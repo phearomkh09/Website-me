@@ -117,45 +117,45 @@ document.getElementById(
 const songs=[
 
 [
-"music1.mp3",
+"1.រាល់សូរតំណក់ទឹកភ្លៀង.mp3",
 "រាល់សូរតំណក់ទឹកភ្លៀង",
 "Artist: Mann Doss",
-"cover1.jpg"
+"1.When-the-rain-drop.jpg"
 ],
 
 [
-"music2.mp3",
+"2.សេកុង.mp3",
 "សេកុង",
 "Artist: Mann Doss",
-"cover2.jpg"
+"2.sekong.jpg"
 ],
 
 [
-"music3.mp3",
+"3.បង់បោយ.mp3",
 "YOUNG GOAT - បង់បោយ",
 "Artist: Young Goat",
-"cover3.jpg"
+"3.BorngBoay.jpg"
 ],
 
 [
-"music4.mp3",
+"4.NIGHT-THINKER.mp3",
 "NIGHT THINKER",
 "Artist: Mann Vannda",
-"cover4.jpg"
+"4.NIGHT-THINKER.jpg"
 ],
 
 [
-"music5.mp3",
+"5.Way-You-Are.mp3",
 "Way You Are",
 "Artist: Jady | Jenna Norodom",
-"cover5.jpg"
+"5.Way-You-Are.jpg"
 ],
 
 [
-"music6.mp3",
+"6.LOVE-SICK-BLUE.mp3",
 "LOVE SICK BLUE",
 "Artist: Mann Vannda",
-"cover6.jpg"
+"6.LOVE-SICK-BLUE.jpg"
 ]
 
 ];
