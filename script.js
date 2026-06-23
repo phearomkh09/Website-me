@@ -297,12 +297,6 @@ navigator
 ()=>player.pause()
 );
 
-/* FIRST LOAD */
-
-changeSong(
-...songs[0]
-);
-
 /* AUTO NEXT SONG */
 
 player.addEventListener(
