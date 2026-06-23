@@ -2,14 +2,12 @@
    CONTACT BUTTON
 ========================= */
 
-function goContact(){
-
+function goContact() {
   document
   .getElementById("contact")
-  .scrollIntoView({
-    behavior:"smooth"
+  ?.scrollIntoView({
+    behavior: "smooth"
   });
-
 }
 
 /* =========================
@@ -19,115 +17,288 @@ function goContact(){
 const slides =
 document.querySelectorAll(".slide");
 
+if(slides.length){
+
 let index = 0;
 
-setInterval(() => {
+setInterval(()=>{
 
-  slides[index]
-  .classList.remove("active");
+slides[index]
+.classList.remove("active");
 
-  index++;
+index =
+(index+1)
+%slides.length;
 
-  if(index >= slides.length){
-    index = 0;
-  }
-
-  slides[index]
-  .classList.add("active");
+slides[index]
+.classList.add("active");
 
 },3000);
+
+}
 
 /* =========================
    SNOW EFFECT
 ========================= */
 
 const snowContainer =
-document.querySelector(".snow-container");
+document.querySelector(
+".snow-container"
+);
 
 function createSnow(){
 
-  const snow =
-  document.createElement("div");
+if(!snowContainer) return;
 
-  snow.className = "snowflake";
+const snow =
+document.createElement("div");
 
-  snow.innerHTML = "❄";
+snow.className =
+"snowflake";
 
-  /* RANDOM POSITION */
-  snow.style.left =
-  Math.random() * 100 + "vw";
+snow.innerHTML =
+"❄";
 
-  /* RANDOM SIZE */
-  snow.style.fontSize =
-  Math.random() * 15 + 15 + "px";
+snow.style.left =
+Math.random()*100+"vw";
 
-  /* RANDOM SPEED */
-  snow.style.animationDuration =
-  Math.random() * 8 + 12 + "s";
+snow.style.fontSize =
+Math.random()*15+15+"px";
 
-  snowContainer.appendChild(snow);
+snow.style.animationDuration =
+Math.random()*8+12+"s";
 
-  setTimeout(() => {
-    snow.remove();
-  },15000);
+snowContainer
+.appendChild(snow);
+
+setTimeout(
+()=>snow.remove(),
+15000
+);
 
 }
 
-/* LOTS OF SNOW */
-setInterval(createSnow,250);
+setInterval(
+createSnow,
+250
+);
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+const player =
+document.getElementById(
+"musicPlayer"
+);
+
+const source =
+document.getElementById(
+"musicSource"
+);
+
+const cover =
+document.getElementById(
+"musicCover"
+);
+
+const title =
+document.getElementById(
+"musicTitle"
+);
+
+const artist =
+document.getElementById(
+"musicArtist"
+);
+
+/* 6 SONGS */
+
+const songs=[
+
+[
+"music1.mp3",
+"រាល់សូរតំណក់ទឹកភ្លៀង",
+"Artist: Mann Doss",
+"cover1.jpg"
+],
+
+[
+"music2.mp3",
+"សេកុង",
+"Artist: Mann Doss",
+"cover2.jpg"
+],
+
+[
+"music3.mp3",
+"YOUNG GOAT - បង់បោយ",
+"Artist: Young Goat",
+"cover3.jpg"
+],
+
+[
+"music4.mp3",
+"NIGHT THINKER",
+"Artist: Mann Vannda",
+"cover4.jpg"
+],
+
+[
+"music5.mp3",
+"Way You Are",
+"Artist: Jady | Jenna",
+"cover5.jpg"
+],
+
+[
+"music6.mp3",
+"LOVE SICK BLUE",
+"Artist: Mann Vannda",
+"cover6.jpg"
+]
+
+];
+
+let current=0;
 
 /* CHANGE SONG */
 
 function changeSong(
-song,
-title,
-artist,
-cover
+src,
+songTitle,
+songArtist,
+songCover
 ){
 
-  const player =
-  document.getElementById(
-  "musicPlayer"
-  );
+source.src =
+src;
 
-  const source =
-  document.getElementById(
-  "musicSource"
-  );
+player.load();
 
-  const musicTitle =
-  document.getElementById(
-  "musicTitle"
-  );
+cover.src =
+songCover;
 
-  const musicArtist =
-  document.getElementById(
-  "musicArtist"
-  );
+title.innerText =
+songTitle;
 
-  const musicCover =
-  document.getElementById(
-  "musicCover"
-  );
+artist.innerText =
+songArtist;
 
-  /* CHANGE SONG */
-  source.src = song;
+/* LOCK SCREEN */
 
-  /* CHANGE TITLE */
-  musicTitle.innerHTML =
-  title;
+if(
+"mediaSession"
+in navigator
+){
 
-  /* CHANGE ARTIST */
-  musicArtist.innerHTML =
-  artist;
+navigator
+.mediaSession
+.metadata =
 
-  /* CHANGE COVER */
-  musicCover.src = cover;
+new MediaMetadata({
 
-  /* RELOAD */
-  player.load();
+title:
+songTitle,
 
-  /* PLAY */
-  player.play();
+artist:
+songArtist,
+
+album:
+"X'zen Official",
+
+artwork:[
+
+{
+src:
+songCover,
+
+sizes:
+"512x512",
+
+type:
+"image/jpeg"
+}
+
+]
+
+});
 
 }
+
+/* PLAY */
+
+player.play();
+
+current =
+songs.findIndex(
+s =>
+s[0]===src
+);
+
+}
+
+/* NEXT */
+
+navigator
+.mediaSession
+?.setActionHandler(
+"nexttrack",
+()=>{
+
+current=
+(current+1)
+%songs.length;
+
+changeSong(
+...songs[current]
+);
+
+}
+);
+
+/* PREVIOUS */
+
+navigator
+.mediaSession
+?.setActionHandler(
+"previoustrack",
+()=>{
+
+current=
+(
+current-1+
+songs.length
+)
+%songs.length;
+
+changeSong(
+...songs[current]
+);
+
+}
+);
+
+/* PLAY */
+
+navigator
+.mediaSession
+?.setActionHandler(
+"play",
+()=>player.play()
+);
+
+/* PAUSE */
+
+navigator
+.mediaSession
+?.setActionHandler(
+"pause",
+()=>player.pause()
+);
+
+/* FIRST LOAD */
+
+changeSong(
+...songs[0]
+);
