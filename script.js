@@ -302,3 +302,20 @@ navigator
 changeSong(
 ...songs[0]
 );
+
+/* AUTO NEXT SONG */
+
+player.addEventListener(
+"ended",
+()=>{
+
+current=
+(current+1)
+%songs.length;
+
+changeSong(
+...songs[current]
+);
+
+}
+);
