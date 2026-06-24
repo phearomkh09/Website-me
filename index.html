@@ -231,14 +231,18 @@ href="style.css">
       </p>
 
       <!-- AUDIO -->
-      <audio id="musicPlayer"
-      controls>
+      <audio
+      id="musicPlayer"
+      controls
+      controlsList="nodownload"
+      oncontextmenu="return false;">
+    
+      <source
+      id="musicSource"
+      src="music1.mp3"
+      type="audio/mpeg">
 
-        <source id="musicSource"
-        src="music1.mp3"
-        type="audio/mpeg">
-
-      </audio>
+     </audio>
 
       <!-- BUTTONS -->
       <div class="music-buttons">
