@@ -152,10 +152,10 @@ const songs=[
 ],
 
 [
-"6.LOVE-SICK-BLUE.mp3",
-"LOVE SICK BLUE",
-"Artist: Mann Vannda",
-"6.LOVE-SICK-BLUE.jpg"
+"6.ទំនេរ_ _ FREE.mp3",
+"ទំនេរ | FREE",
+"Artist: Sing Bimo",
+"6.ទំនេរ-FREE.jpg"
 ]
 
 ];
@@ -346,6 +346,75 @@ document.hidden
 player.pause();
 
 }
+
+}
+);
+
+/* =========================
+   KEEP SCREEN ON
+========================= */
+
+let wakeLock = null;
+
+async function requestWakeLock(){
+
+  try{
+
+    wakeLock =
+    await navigator
+    .wakeLock
+    .request("screen");
+
+    console.log(
+    "Screen Lock Active"
+    );
+
+  }catch(err){
+
+    console.log(
+    "Wake Lock Error:",
+    err
+    );
+
+  }
+
+}
+
+/* START */
+
+requestWakeLock();
+
+/* RE-ENABLE WHEN USER RETURNS */
+
+document.addEventListener(
+"visibilitychange",
+
+async ()=>{
+
+  if(
+  document.visibilityState
+  === "visible"
+  ){
+
+    await requestWakeLock();
+
+  }
+
+}
+);
+
+/* RELEASE WHEN PAGE CLOSES */
+
+window.addEventListener(
+"beforeunload",
+
+()=>{
+
+  if(wakeLock){
+
+    wakeLock.release();
+
+  }
 
 }
 );
