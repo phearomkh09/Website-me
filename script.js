@@ -117,10 +117,10 @@ document.getElementById(
 const songs=[
 
 [
-"1.រាល់សូរតំណក់ទឹកភ្លៀង.mp3",
-"រាល់សូរតំណក់ទឹកភ្លៀង",
-"Artist: Mann Doss",
-"1.When-the-rain-drop.jpg"
+"1.All3rgy Ft. Monetrey Ek - Ocean Breeze [Official Lyrics Video] [nOPa4hrhZXQ].mp3",
+"All3rgy Ft. Monetrey Ek - Ocean",
+"Artist: All3rgy Ft. Monetrey Ek",
+"1.All3rgy Ft. Monetrey Ek.jpg"
 ],
 
 [
