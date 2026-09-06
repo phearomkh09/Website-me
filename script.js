@@ -117,10 +117,10 @@ document.getElementById(
 const songs=[
 
 [
-"1.All3rgy Ft. Monetrey Ek - Ocean Breeze [Official Lyrics Video] [nOPa4hrhZXQ].mp3",
+"1.Ocean.mp3",
 "All3rgy Ft. Monetrey Ek - Ocean",
 "Artist: All3rgy Ft. Monetrey Ek",
-"1.All3rgy Ft. Monetrey Ek.jpg"
+"1.All3rgy-Ft-Monetrey-Ek.jpg"
 ],
 
 [
